@@ -1,0 +1,7 @@
+run redis.server.exe
+
+python manage.py runserver
+
+celery -A core worker -l info -P gevent - first
+
+celery -A core beat -l info
